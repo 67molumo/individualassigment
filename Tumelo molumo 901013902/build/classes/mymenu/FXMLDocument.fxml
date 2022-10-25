@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="669.0" style="-fx-background-image: url('restaurant-menu-design_1772224.jpg');" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mymenu.FXMLDocumentController">
+    <children>
+      <ImageView fitHeight="581.0" fitWidth="670.0">
+         <image>
+            <Image url="@restaurant-menu-design_1772224.jpg" />
+         </image>
+      </ImageView>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <AnchorPane layoutX="37.0" layoutY="85.0" prefHeight="104.0" prefWidth="224.0" style="-fx-background-color: white;">
+         <children>
+            <CheckBox fx:id="riceBeefbtn" layoutX="25.0" layoutY="21.0" mnemonicParsing="false" text="Rice+Beef" />
+            <CheckBox fx:id="riceChickbtn" layoutX="25.0" layoutY="48.0" mnemonicParsing="false" text="Rice+chicken" />
+            <CheckBox fx:id="marconBeefbtn" layoutX="25.0" layoutY="73.0" mnemonicParsing="false" text="marcaron+beef" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="421.0" layoutY="85.0" prefHeight="104.0" prefWidth="224.0" style="-fx-background-color: white;">
+         <children>
+            <RadioButton fx:id="custardAndJellybtn" layoutX="27.0" layoutY="23.0" mnemonicParsing="false" onAction="#CustardJellyClick" prefHeight="17.0" prefWidth="103.0" text="custard&amp;Jelly" />
+            <RadioButton fx:id="chocolateCakebtn" layoutX="27.0" layoutY="44.0" mnemonicParsing="false" onAction="#chocolatecakeClick" text="chocolateCakeslice" />
+            <RadioButton fx:id="cupcakesbtn" layoutX="27.0" layoutY="65.0" mnemonicParsing="false" onAction="#cupcakesClick" text="cupcakes" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="31.0" layoutY="373.0" prefHeight="104.0" prefWidth="224.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="13.0" layoutY="44.0" prefHeight="17.0" prefWidth="83.0" text="choose Drink" />
+            <ComboBox fx:id="combobox" layoutX="96.0" layoutY="40.0" prefHeight="25.0" prefWidth="108.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="totalbnt" layoutX="37.0" layoutY="533.0" mnemonicParsing="false" onAction="#Totalresul" prefHeight="25.0" prefWidth="92.0" text="Total Amount" />
+      <Button fx:id="change" layoutX="204.0" layoutY="533.0" mnemonicParsing="false" onAction="#resultChange" prefHeight="25.0" prefWidth="69.0" text="change" />
+      <Button fx:id="resetbtn" layoutX="316.0" layoutY="533.0" mnemonicParsing="false" onAction="#Reset" prefHeight="25.0" prefWidth="69.0" text="Reset" />
+      <Button fx:id="exitbtn" layoutX="456.0" layoutY="533.0" mnemonicParsing="false" onAction="#Exit" prefHeight="25.0" prefWidth="69.0" text="Exit" />
+      <TextField fx:id="DisplayTotall" layoutX="491.0" layoutY="394.0" text="0">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Amount_paid" layoutX="489.0" layoutY="435.0" promptText="enter amountPaid" />
+      <TextField fx:id="DisplayChange" layoutX="489.0" layoutY="477.0" prefHeight="25.0" prefWidth="149.0" text="0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="350.0" layoutY="391.0" prefHeight="31.0" prefWidth="142.0" text="Total_amount" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="432.0" prefHeight="31.0" prefWidth="142.0" text="Amount_tendered" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="474.0" prefHeight="31.0" prefWidth="158.0" text="CHANGE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="DisplayAmountDentered" layoutX="239.0" layoutY="37.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: black;" text="0">
+         <font>
+            <Font name="System Bold" size="1.0" />
+         </font>
+      </TextField>
+    </children>
+</AnchorPane>
